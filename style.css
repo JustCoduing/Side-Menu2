@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"Poppins"
+}
+
+/*TOP START*/
+
+body 
+{
+    height:100vh;
+    width:100vw;
+    background: lightsteelblue;
+
+}
+
+.sidebar.change
+{
+    width:250px;
+    min-height: 100%;
+    background-image: linear-gradient(to top, #d6dbdb 0%, #a2a3a3 100%);
+    color: white;
+}
+.sidebar 
+{
+    width:75px;
+    min-height: 100%;
+    background-image: linear-gradient(to top, #d6dbdb 0%, #a2a3a3 100%);
+    color: white;
+    transition: all .3s ease ;
+}
+
+.sidebar.change .top
+{
+
+ width:100%;
+ display: flex;
+ align-items: center;
+ padding-left: 10px;
+ height:75px;
+
+
+ 
+}
+.sidebar.change .top .info 
+{
+    display: initial;
+}
+.sidebar .top .info 
+{
+    display: none;
+}
+.sidebar .top
+{
+    display: flex;
+    align-items: center;
+   
+}
+
+
+.fa-burger
+{
+    font-size: 50px;
+    color: gold;
+    padding-left: 10px;
+}
+
+.sidebar.change .fa-burger 
+{
+    font-size: 50px;
+    color:gold;
+    padding-left: 0;
+}
+.info
+{
+    flex: 1;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+
+.name 
+{
+    font-size: 20px;
+    font-weight: 600;
+}
+.role   
+{
+    font-weight: 500;
+}
+
+.sidebar.change #switch 
+{
+   
+   position: relative;
+   left: 15px;
+   width: 30px;
+   height: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background:lightcoral;
+   border: none;
+   border-radius: 50%;
+   font-size: 18px;
+   cursor: pointer;
+   transition: all .2s ease;
+   font-size: 15px;
+    
+}
+.sidebar.change #switch:hover
+{
+    background:ghostwhite;
+    color: lightcoral;
+}
+
+
+#switch
+{
+    
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    position: absolute;
+    width:25px;
+    height: 25px;
+    left:62px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+#switch:hover
+{
+    background: ghostwhite;
+    color: lightcoral;
+}
+
+/* #switch:hover, .sidebar.change #switch:hover 
+{
+    transform: scale(1.1);
+} */
+
+/*TOP END */
+
+
+/*CENTER START*/
+.sidebar.change .center ul 
+{
+    
+    display: flex;
+    flex-direction: column;
+    padding-left:20px ;
+    padding-right:20px ;
+    
+}
+
+
+.sidebar .center ul 
+{
+    
+    padding:0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+
+ .sidebar.change .center ul li 
+{
+    list-style: none;
+    height: 60px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all .2s ease;
+    border: none;
+    
+} 
+.sidebar.change .center ul li i
+{
+    transition: all 0s ;
+}
+
+.sidebar.change .center ul li:hover i
+{
+    transform: scale(1);
+}
+.sidebar .center ul li 
+{
+    list-style: none;
+    width:100%;
+    height:60px;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+.sidebar .center ul li i 
+{
+    transition: all .3s ease;
+}
+.sidebar .center ul li:hover i 
+{
+    transform: scale(1.25);
+}
+
+ 
+
+.center ul li i 
+{
+    font-size: 21px;
+   
+    
+    
+}
+.sidebar.change .center ul li span 
+{
+    display: initial;
+    font-size: 18px;
+}
+.center ul li span 
+{
+   display: none;
+}
+
+.sidebar.change .center ul>:nth-child(1)
+{
+    border: none;
+    border-radius: 10px;
+    background: lightgray;
+    color: white;
+}
+.center ul>:nth-child(1):hover
+{
+    background: white;
+    color: dodgerblue;
+}
+.sidebar.change .center ul .input 
+{
+    position: relative;
+}
+.sidebar.change .center ul input 
+{
+    border: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: lightgray;
+    display: initial;
+    position: absolute;
+    padding-left: 40px;
+    left: 0;
+
+    
+  
+
+}
+
+.sidebar.change .center ul .input i
+{
+    z-index: 99;
+}
+.center ul input 
+{
+    display: none; 
+   
+}
+
+
+.center ul li:hover:not(.input)
+{
+    background: white;
+    color: dodgerblue;
+}
+/*CENTER END*/
+
+/*BOTTOM START*/
+.sidebar.change .bottom 
+{
+    border: none;
+    border-radius: 10px;
+    height: 100px;
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background:lightskyblue;
+
+
+}
+
+.sidebar.change .bottom i 
+{
+    font-size:45px ;
+    display: initial;
+}
+.sidebar.change .bottom p 
+{
+    font-size: 18px;
+    display: initial;
+}
+.bottom i , .bottom p 
+{
+    display: none;
+}
+
+.bottom 
+{
+    border: none;
+    height: 50px;
+    margin: 50px 10px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightskyblue;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.342) 0px 3px 10px;
+
+}
+
+.toggle 
+{
+    width:40px;
+    height:15px;
+    background:grey;
+    border-radius:8px ;
+    position: relative;
+    cursor: pointer;
+   
+}
+
+.toggle::before
+{
+    content: " ";
+    position: absolute;
+    width:15px;
+    height:15px;
+    background:whitesmoke;
+    border-radius: 50%;
+    transition: all .2s ease;
+
+}
+
+.toggle.active::before
+{
+    transform:translateX(25px)
+}
+
+.fas.fa-sun
+{
+    color: #ebf7f7;
+}
+
+
+/*BOTTOM END*/
+
+
+
+/*DARK MODE START*/
+
+body.theme
+{
+    background: linear-gradient(#000000,#0a0a0a,#131212,#202020,#302e2e,#424040,#464747);
+}
+
+body.theme .sidebar
+{
+    background: rgb(44, 42, 42);
+}
+
+body.theme .sidebar .bottom 
+{
+    background: darkgrey;
+    box-shadow: ghostwhite 0px 3px 30px;
+}
+
+body.theme .sidebar .bottom i, body.theme .sidebar .bottom p
+{
+    color: whitesmoke;
+}
+
+body.theme .sidebar .top .fa-burger
+{
+    color: ghostwhite;
+}
+
+body.theme .sidebar .bottom .toggle::before
+{
+    background:rgba(0, 0, 0, 0.719)
+}
+body.theme .sidebar .bottom .toggle
+{
+    background: whitesmoke;
+}
+
+body.theme .sidebar .fas.fa-moon
+{
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.493) 0px 3px 20px;
+    
+}
+
+
+body.theme .sidebar #switch 
+{
+    background: ghostwhite;
+    color: rgba(0, 0, 0, 0.74);
+    transition: all .2s ease;
+}
+
+
+
+body.theme .sidebar #switch:hover 
+{
+    background:rgb(30, 143, 255);
+    color: ghostwhite;
+}
+
+
+/* DARK MODE END */
+
+
+
